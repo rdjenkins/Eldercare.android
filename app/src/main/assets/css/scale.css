@@ -1,0 +1,48 @@
+
+div .row1, .col1 {
+    margin-left: 1rem;
+}
+
+div .col1 {
+    text-indent: -1rem;
+    padding-left: 1rem; 
+}
+
+.calculator, .refs {
+    padding-top: 1rem;
+}
+
+.reset {
+    padding-bottom: 1rem;
+}
+
+
+input[type=checkbox] { display:none; } /* to hide the checkbox itself */
+input[type=checkbox] + label:before {
+  font-family: FontAwesome;
+  display: inline-block;
+}
+
+input[type=checkbox] + label:before { content: "\f096"; width: 1rem;} /* unchecked icon */
+input[type=checkbox] + label:before { letter-spacing: 1rem; } /* space between checkbox and label */
+
+input[type=checkbox]:checked + label:before { content: "\f046"; ; width: 1rem;} /* checked icon (alternative = f14a) */
+input[type=checkbox]:checked + label:before { letter-spacing: 1rem; } /* allow space for check mark */
+
+
+input[type=radio] { display:none; } /* to hide the radio itself */
+input[type=radio] + label:before {
+  font-family: FontAwesome;
+  display: inline-block;
+}
+
+input[type=radio] + label:before { content: "\f10c"; width: 1rem;} /* unchecked circle */
+input[type=radio] + label:before { letter-spacing: 1rem; } /* space between radio and label */
+
+input[type=radio]:checked + label:before { content: "\f111"; ; width: 1rem;} /* checked icon (alternative = f058) */
+input[type=radio]:checked + label:before { letter-spacing: 1rem; } /* allow space for check mark */
+input[type=radio]:checked + label { background: #e0e0e0; } /* extra visual identification of radio option */
+
+
+
+
