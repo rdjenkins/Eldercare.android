@@ -1,0 +1,37 @@
+* Acute Heart Failure
+
+Quality standards adapted from NICE QS103 2015 and CG187 2014
+
+** 1 Natriuretic peptide
+
+Adults presenting to hospital with new suspected acute heart failure have a single measurement of natriuretic peptide.
+Use the following thresholds to rule out the diagnosis of heart failure:
+ BNP less than 100 ng/litre
+ NT‑proBNP less than 300 ng/litre
+
+** 2 ECHO
+
+Adults admitted to hospital with new suspected acute heart failure and raised natriuretic peptide levels have a transthoracic doppler 2D echocardiogram within 48 hours of admission.
+
+** 3 Heart failure team
+
+Adults admitted to hospital with acute heart failure have input within 24 hours of admission from a dedicated specialist heart failure team.
+
+** 4 Beta-blocker
+
+Adults with acute heart failure due to left ventricular systolic dysfunction are started on, or continue with, beta‑blocker treatment during their hospital admission. (Unless they have a heart rate less than 50 beats per minute, second or third degree atrioventricular block, or shock.)
+Ensure that the person's condition is stable for typically 48 hours after starting or restarting beta‑blockers and before discharging from hospital.
+
+** 5 ACE inhibitors and aldosterone antagonist
+
+Adults admitted to hospital with acute heart failure and reduced left ventricular ejection fraction are offered an angiotensin‑converting enzyme (ACE) inhibitor and an aldosterone antagonist.
+Offer an angiotensin‑converting enzyme inhibitor (or angiotensin receptor blocker if there are intolerable side effects) and an aldosterone antagonist during hospital admission to people with acute heart failure and reduced left ventricular ejection fraction. If the angiotensin‑converting enzyme inhibitor (or angiotensin receptor blocker) is not tolerated an aldosterone antagonist should still be offered.
+
+** 6 Follow-up
+
+Adults with acute heart failure have a follow‑up clinical assessment by a member of the community- or hospital‑based specialist heart failure team within 2 weeks of hospital discharge.
+
+*** Source
+
+[[https://www.nice.org.uk/guidance/qs103/chapter/List-of-quality-statements][NICE Quality standard QS103 December 2015]]
+[[https://www.nice.org.uk/guidance/cg187][NICE Acute heart failure: diagnosis and management. Clinical guideline CG187 October 2014]]
