@@ -75,7 +75,7 @@ function simplecheckbox(varname,value,labeltext,onclick) {
     var html = '    <div class="row1">' +
 '        <div class="col1">' +
 '            <input id="' + varname + '" value="'+ value +'" onclick="'+ onclick +'" type="checkbox">' +
-'            <label for="' + varname + '">' + labeltext + '' +
+'            <label for="' + varname + '">' + labeltext + '</label>' +
 '        </div>' +
 '    </div>'
     return html;
@@ -92,7 +92,7 @@ headerBlurb("CURB-65 score","Risk of death in community-acquired pneumonia","Tic
 simplecheckbox("tblable_calc_form_c","1","Confusion - i.e. AMT score of 8 or less (1)","CURB65();") +
 simplecheckbox("tblable_calc_form_u","1","Urea &gt;7 mmol/l (1)","CURB65();") +
 simplecheckbox("tblable_calc_form_r","1","Respiratory rate &gt;30/min (1)","CURB65();") +
-simplecheckbox("tblable_calc_form_b","1","Blood pression (SBP &lt;90mmHg or DBP ≤60mmHg (1)","CURB65();") +
+simplecheckbox("tblable_calc_form_b","1","Blood pressure (SBP &lt;90mmHg or DBP ≤60mmHg (1)","CURB65();") +
 simplecheckbox("tblable_calc_form_a","1","Age ≥65 (1)","CURB65();") +
 
 '    <div id="result" class="alert alert-success">' +

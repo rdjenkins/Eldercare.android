@@ -120,7 +120,7 @@ function simplecheckbox(varname,value,labeltext,onclick) {
     var html = '    <div class="row1">' +
 '        <div class="col1">' +
 '            <input id="' + varname + '" value="'+ value +'" onclick="'+ onclick +'" type="checkbox">' +
-'            <label for="' + varname + '">' + labeltext + '' +
+'            <label for="' + varname + '">' + labeltext + '</label>' +
 '        </div>' +
 '    </div>'
     return html;

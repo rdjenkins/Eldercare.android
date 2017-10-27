@@ -44,5 +44,9 @@ input[type=radio]:checked + label:before { letter-spacing: 1rem; } /* allow spac
 input[type=radio]:checked + label { background: #e0e0e0; } /* extra visual identification of radio option */
 
 
-
+/*.yndk input[type=radio] {display: contents;}*/
+.yndk input[type=radio] + label { background: #ffffff; padding: 0.5rem;}
+.yndk input[type=radio] + label:before { content: ""; letter-spacing: 0;}
+.yndk input[type=radio]:checked + label:before { content: ""; letter-spacing: 0;}
+.yndk input[type=radio]:checked + label { background: #e0e0e0; border: 1px solid black; }
 
