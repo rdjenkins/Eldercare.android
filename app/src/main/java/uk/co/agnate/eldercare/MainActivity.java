@@ -1,5 +1,7 @@
 package uk.co.agnate.eldercare;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
@@ -29,11 +31,23 @@ public class MainActivity extends AppCompatActivity {
         webview = new WebView(this);
         // enable javascript (ignore the security warning)
         webview.getSettings().setJavaScriptEnabled(true);
-        // set a webclient so we can listen for when pages are fully loaded
+        // set a webviewclient to do particular stuff
         webview.setWebViewClient(new WebViewClient() {
-            // listen to the loading of each page
+            // set webviewclient so we can intercept external links
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                if (url.startsWith("http")) {
+                    Toast.makeText(getApplicationContext(), "Opening in browser", Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+                    return true; // this used to work on its own but intent above required now
+                }
+                return false;
+            }
+
+            // set webviewclient so we can listen for when pages are fully loaded
+            @Override
             public void onPageFinished(WebView view, String url) {
-                // when each page loaded
+                super.onPageFinished(webview, url);
                 if (!firstpageloaded) {
                     setContentView(webview); // show the webview (overwriting the 'splash screen')
                     firstpageloaded = true; // set to true as setting content to the webview each time a page loads is silly
