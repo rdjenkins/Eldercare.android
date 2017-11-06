@@ -8,17 +8,6 @@
 // Creative Commons Attribution 4.0 International (CC BY 4.0)
 // https://creativecommons.org/licenses/by/4.0/
 
-function getvaluefromcheckbox(id) {
-    if (document.getElementById(id).checked) {
-        return parseFloat(document.getElementById(id).value);
-    } else {
-        return 0;
-    }
-}
-
-function uncheck(id) {
-    document.getElementById(id).checked = false;
-}
 
 function Cha2ds2vasc()
 {
@@ -105,26 +94,6 @@ function resetCalc() {
     uncheck("tblable_calc_form_sc");
 }
 
-function unckeck(varname) {
-    document.getElementById(varname).checked = false;
-}
-
-function headerBlurb(title,oneliner,instruction) {
-    var html='<h2>' + title + '</h2>' +
-'<p>' + oneliner + '</p>' +
-'<p class="font-italic">' + instruction + '</p>'
-    return html;
-}
-
-function simplecheckbox(varname,value,labeltext,onclick) {
-    var html = '    <div class="row1">' +
-'        <div class="col1">' +
-'            <input id="' + varname + '" value="'+ value +'" onclick="'+ onclick +'" type="checkbox">' +
-'            <label for="' + varname + '">' + labeltext + '</label>' +
-'        </div>' +
-'    </div>'
-    return html;
-}
 
 var calculatorHTML = '' +
 '<div class="calculator" id="tblable_calc">' +
@@ -136,11 +105,11 @@ headerBlurb("CHA<sub>2</sub>DS<sub>2</sub>-VASc score","Risk of stroke in non-va
 
 simplecheckbox("tblable_calc_form_c","1","Congestive heart failure (or Left ventricular systolic dysfunction) (1)","Cha2ds2vasc();") +
 simplecheckbox("tblable_calc_form_h","1","Hypertension: blood pressure consistently above 140/90 mmHg (or treated hypertension on medication) (1)","Cha2ds2vasc();") +
-simplecheckbox("tblable_calc_form_a2","2","Age ≥75 years (2)","unckeck('tblable_calc_form_a'); Cha2ds2vasc();") +
+simplecheckbox("tblable_calc_form_a2","2","Age ≥75 years (2)","uncheck('tblable_calc_form_a'); Cha2ds2vasc();") +
 simplecheckbox("tblable_calc_form_d","1","Diabetes Mellitus (1)","Cha2ds2vasc();") +
 simplecheckbox("tblable_calc_form_s2","2","Prior Stroke or TIA or thromboembolism (2)","Cha2ds2vasc();") +
 simplecheckbox("tblable_calc_form_v","1","Vascular disease (e.g. peripheral artery disease, myocardial infarction, aortic plaque) (1)","Cha2ds2vasc();") +
-simplecheckbox("tblable_calc_form_a","1","Age 65–74 years (1)","unckeck('tblable_calc_form_a2'); Cha2ds2vasc();") +
+simplecheckbox("tblable_calc_form_a","1","Age 65–74 years (1)","uncheck('tblable_calc_form_a2'); Cha2ds2vasc();") +
 simplecheckbox("tblable_calc_form_sc","1","Female (1)","Cha2ds2vasc();") +
 
 '    <div id="result" class="alert alert-success">' +

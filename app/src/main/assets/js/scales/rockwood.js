@@ -8,46 +8,6 @@
 // Creative Commons Attribution 4.0 International (CC BY 4.0)
 // https://creativecommons.org/licenses/by/4.0/
 
-function getvaluefromcheckbox(id) {
-    if (document.getElementById(id).checked) {
-        return parseFloat(document.getElementById(id).value);
-    } else {
-        return 0;
-    }
-}
-
-// getvaluefromradio() for getting radio values
-function getvaluefromradio(name) { // radio buttons work if they have the same name!
-    var radios = document.getElementsByName(name);
-
-    for (var i = 0, length = radios.length; i < length; i++) {
-        if (radios[i].checked) {
-            return parseFloat(radios[i].value);
-            // only one radio can be logically checked, don't check the rest
-            break;
-        }
-    }
-    return null; // we may get here if no radio is checked
-}
-
-function uncheck(id) {
-    document.getElementById(id).checked = false;
-}
-
-//uncheckradio() for unchecking radio buttons
-function uncheckradio(name) { // radio buttons work if they have the same name!
-    var radios = document.getElementsByName(name);
-
-    for (var i = 0, length = radios.length; i < length; i++) {
-        radios[i].checked = false;
-    }
-}
-
-//checkradio() for checking radio buttons
-function checkradio(id) { // specific radio button options have different id's
-    document.getElementById(id).checked = true;
-}
-
 
 function frailty()
 {
@@ -95,37 +55,6 @@ function frailty()
 function resetCalc() {
     uncheckradio("tblable_calc_form_frailty");
     checkradio("tblable_calc_form_frailty1"); // frailty score starts at 1
-}
-
-function unckeck(varname) {
-    document.getElementById(varname).checked = false;
-}
-
-function headerBlurb(title,oneliner,instruction) {
-    var html='<h2>' + title + '</h2>' +
-'<p>' + oneliner + '</p>' +
-'<p class="font-italic">' + instruction + '</p>'
-    return html;
-}
-
-function simplecheckbox(varname,value,labeltext,onclick) {
-    var html = '    <div class="row1">' +
-'        <div class="col1">' +
-'            <input id="' + varname + '" value="'+ value +'" onclick="'+ onclick +'" type="checkbox">' +
-'            <label for="' + varname + '">' + labeltext + '</label>' +
-'        </div>' +
-'    </div>'
-    return html;
-}
-
-function simpleradio(varid,varname,value,labeltext,onclick) {
-    var html = '    <div class="row1">' +
-'        <div class="col1">' +
-'            <input id="' + varid + '" name="' + varname + '" value="'+ value +'" onclick="'+ onclick +'" type="radio">' +
-'            <label for="' + varid + '">' + labeltext + '</label>' +
-'        </div>' +
-'    </div>'
-    return html;
 }
 
 

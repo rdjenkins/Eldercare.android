@@ -91,10 +91,6 @@ function resetCalc() {
     uncheck("tblable_calc_form_diabetes");
 }
 
-function unckeck(varname) {
-    document.getElementById(varname).checked = false;
-}
-
 function headerBlurb(title,oneliner,instruction) {
     var html='<h2>' + title + '</h2>' +
 '<p>' + oneliner + '</p>' +

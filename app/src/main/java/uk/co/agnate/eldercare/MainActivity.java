@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                     setContentView(webview); // show the webview (overwriting the 'splash screen')
                     firstpageloaded = true; // set to true as setting content to the webview each time a page loads is silly
                 }
-                // flag true this page is the starturl
+                // flag true if this page is the starturl
                 isonstarturl = url.equals(starturl);
             }
         });
@@ -60,8 +60,7 @@ public class MainActivity extends AppCompatActivity {
         // navigation to the HTML5 app within the app/src/main/assets folder
         webview.loadUrl(starturl);
 
-        Toast bread = Toast.makeText(getApplicationContext(), loadingmessage, Toast.LENGTH_LONG);
-        bread.show();
+        Toast.makeText(getApplicationContext(), loadingmessage, Toast.LENGTH_LONG).show();
     } // end of onCreate()
 
 

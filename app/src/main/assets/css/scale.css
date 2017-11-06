@@ -8,8 +8,18 @@ div .col1 {
     padding-left: 1rem; 
 }
 
+div .col0 {
+    text-indent: -1rem;
+    padding-left: 0rem; 
+}
+
 .calculator, .refs {
     padding-top: 1rem;
+}
+
+.calculator p.simpleheader {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
 }
 
 .reset {

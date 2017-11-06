@@ -7,7 +7,7 @@ android {
         applicationId "uk.co.agnate.eldercare"
         minSdkVersion 15
         targetSdkVersion 26
-        versionCode 16
+        versionCode 17
         versionName "1.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }

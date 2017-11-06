@@ -3,12 +3,6 @@
 // created 10/Oct/2017 Dean Jenkins
 
 
-function headerBlurb(title,oneliner,instruction) {
-    var html='<h2>' + title + '</h2>' +
-'<p>' + oneliner + '</p>' +
-'<p class="font-italic">' + instruction + '</p>'
-    return html;
-}
 
 var calculatorHTML = '' +
 '<div class="calculator" id="tblable_calc">' +

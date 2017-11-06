@@ -8,13 +8,6 @@
 // Creative Commons Attribution 4.0 International (CC BY 4.0)
 // https://creativecommons.org/licenses/by/4.0/
 
-function getvaluefromcheckbox(id) {
-    if (document.getElementById(id).checked) {
-        return parseFloat(document.getElementById(id).value);
-    } else {
-        return 0;
-    }
-}
 
 function Hasbled()
 {
@@ -84,22 +77,6 @@ function resetCalc() {
     document.getElementById("tblable_calc_form_d2").checked = false;
 }
 
-function headerBlurb(title,oneliner,instruction) {
-    var html='<h2>' + title + '</h2>' +
-'<p>' + oneliner + '</p>' +
-'<p class="font-italic">' + instruction + '</p>'
-    return html;
-}
-
-function simplecheckbox(varname,value,labeltext,onclick) {
-    var html = '    <div class="row1">' +
-'        <div class="col1">' +
-'            <input id="' + varname + '" value="'+ value +'" onclick="'+ onclick +'" type="checkbox">' +
-'            <label for="' + varname + '">' + labeltext + '</label>' +
-'        </div>' +
-'    </div>'
-    return html;
-}
 
 var calculatorHTML = '' +
 '<div class="calculator" id="tblable_calc">' +
