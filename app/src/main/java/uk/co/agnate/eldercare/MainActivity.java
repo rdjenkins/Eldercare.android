@@ -1,5 +1,6 @@
 package uk.co.agnate.eldercare;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -9,6 +10,8 @@ import android.view.WindowManager;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
+
+import java.io.File;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,6 +42,19 @@ public class MainActivity extends AppCompatActivity {
                 if (url.startsWith("http")) {
                     Toast.makeText(getApplicationContext(), "Opening in browser", Toast.LENGTH_LONG).show();
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+                    return true; // this used to work on its own but intent above required now
+                }
+                if (url.startsWith("Xdata")) {
+                    Toast.makeText(getApplicationContext(), "Opening in browser", Toast.LENGTH_LONG).show();
+                    Uri uri = Uri.parse("googlechrome://navigate?url=" + url);
+                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    intent.setPackage("com.android.chrome");
+                    try {
+                        startActivity(intent);
+                    } catch (ActivityNotFoundException ex) {
+                        Toast.makeText(getApplicationContext(), "Browser not found", Toast.LENGTH_LONG).show();
+                    }
                     return true; // this used to work on its own but intent above required now
                 }
                 return false;
